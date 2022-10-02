@@ -11,7 +11,7 @@ on:
         default: "ap-southeast-2"
       bucketName:
         description: "S3 Bucket Name"
-        default: "imba-test-bucket-leo"
+        default: "imba-PPJ"
         required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
