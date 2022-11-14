@@ -29,12 +29,12 @@ orders("order_id")
 //AWS s3 stage for orders 
 create or replace stage imba_stage_input
     url = 's3://imba-ppj/data/orders/orders.csv'
-    credentials = (aws_secret_key = 'eLO9OkH1g9drP40w3Qjqp5V9JKtuhmIGMBvY+/dO' aws_key_id = 'AKIAXNNKJ53VR3QPC52S');
+    credentials = (aws_secret_key = '' aws_key_id = '');
     
 //AWS s3 stage for order_products_prior     
 create or replace stage imba_stage_input2
     url = 's3://imba-ppj/data/order_products/order_products__prior.csv.gz'
-    credentials = (aws_secret_key = 'eLO9OkH1g9drP40w3Qjqp5V9JKtuhmIGMBvY+/dO' aws_key_id = 'AKIAXNNKJ53VR3QPC52S'); 
+    credentials = (aws_secret_key = '' aws_key_id = ''); 
     
 //copy into snowflake ORDER_PRODUCTS_PRIOR
 copy into ORDER_PRODUCTS_PRIOR from @imba_stage_input2
